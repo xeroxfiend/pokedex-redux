@@ -1,0 +1,107 @@
+.open {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  .background {
+    background: #ed1f24;
+    border-radius: 10px;
+    min-height: 100%;
+  }
+  .camera-circle {
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      #c7cae7,
+      #2d3b90
+    );
+    border-radius: 50%;
+    border: 5px solid #111111;
+  }
+  .camera-ring {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background: #e2e3e5;
+    border: 5px solid #111111;
+    margin: 1rem;
+  }
+  .circles-container {
+    display: flex;
+    margin-left: 30%;
+  }
+  .little-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 25px 5px;
+    border: 3px solid #111111;
+  }
+  .red {
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      rgb(231, 200, 199),
+      rgb(219, 37, 37)
+    );
+  }
+  .yellow {
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      rgb(231, 230, 199),
+      rgb(255, 251, 35)
+    );
+  }
+  .green {
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      rgb(204, 231, 199),
+      rgb(58, 255, 19)
+    );
+  }
+  .inside {
+    border: 3px solid #111111;
+    height: 500px;
+    width: 90%;
+    margin: 40px auto;
+    font-family: 'Press Start 2P', cursive;
+    padding: .5rem;
+    position: relative;
+    h1 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: .8rem;
+      text-transform: capitalize;
+      line-height: 1.2rem;
+    }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+      border: 3px solid black;
+      border-radius: 5px;
+      position: absolute;
+      transition: .3s;
+      &:nth-of-type(1) {
+        left: 10px;
+        bottom: 10px;
+      }
+      &:nth-of-type(2) {
+        right: 10px;
+        bottom: 10px;
+      }
+      &:hover {
+        background: #e2e3e5;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

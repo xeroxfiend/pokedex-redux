@@ -1,0 +1,126 @@
+.cover {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  .background {
+    background: #ed1f24;
+    border-radius: 10px;
+    min-height: 100%;
+  }
+  .camera-circle {
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      #c7cae7,
+      #2d3b90
+    );
+    border-radius: 50%;
+    border: 5px solid #111111;
+  }
+  .camera-ring {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background: #e2e3e5;
+    border: 5px solid #111111;
+    margin: 1rem;
+  }
+  .circles-container {
+    display: flex;
+    margin-left: 30%;
+  }
+  .little-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 25px 5px;
+    border: 3px solid #111111;
+  }
+  .red {
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      rgb(231, 200, 199),
+      rgb(219, 37, 37)
+    );
+  }
+  .yellow {
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      rgb(231, 230, 199),
+      rgb(255, 251, 35)
+    );
+  }
+  .green {
+    background-image: radial-gradient(
+      closest-side at 40% 40%,
+      rgb(204, 231, 199),
+      rgb(58, 255, 19)
+    );
+  }
+  .lid {
+    border: 3px solid #111111;
+    height: 500px;
+    width: 90%;
+    margin: 40px auto;
+    .triangle-button {
+      height: 0px;
+      width: 0px;
+      border-left: 45px solid transparent;
+      border-bottom: 45px solid #111111;
+      position: absolute;
+      transform: rotate(-45deg);
+      top: 50%;
+      left: 20px;
+      z-index: 1;
+      transition: 0.3s;
+      &:after {
+        content: '';
+        height: 0px;
+        width: 0px;
+        border-left: 35px solid transparent;
+        border-bottom: 35px solid yellow;
+        position: relative;
+        right: 38px;
+        bottom: 10px;
+        z-index: -1;
+      }
+      &:hover {
+        cursor: pointer;
+        border-bottom: 45px solid #aa55ff;
+      }
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90%;
+      input {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.2rem;
+        max-width: 70%;
+        margin: 0 0 1rem 0;
+        background: none;
+        color: #111111;
+        border: none;
+        border-bottom: 1px solid #111111;
+        padding: 0.2rem;
+        &::placeholder {
+          color: #eeeeee;
+        }
+        &:focus {
+          outline: none;
+          border-bottom: 1px solid #2d3b90;
+          &::placeholder {
+            color: #c7cae7;
+          }
+        }
+      }
+    }
+  }
+}
