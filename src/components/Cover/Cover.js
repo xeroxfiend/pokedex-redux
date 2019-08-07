@@ -1,10 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { setUser } from '../../ducks/userReducer'
-import { getPokemon } from '../../ducks/pokeReducer'
 import { Link } from 'react-router-dom'
 
-const Cover = props => {
+const Cover = () => {
   return (
     <div className="cover">
       <div className="background">
@@ -18,15 +15,10 @@ const Cover = props => {
         </div>
         <div className="lid">
           <Link to="/open">
-            <div onClick={() => props.getPokemon('https://pokeapi.co/api/v2/pokemon')} className="triangle-button" />
+            <div className="triangle-button" />
           </Link>
           <div className="inputs">
-            <input
-              onChange={e => props.setUser(e.target.value)}
-              placeholder="Username"
-              type="text"
-              value={props.user}
-            />
+            <input placeholder="Username" type="text" />
           </div>
         </div>
       </div>
@@ -34,12 +26,4 @@ const Cover = props => {
   )
 }
 
-const mapStateToProps = reduxState => {
-  const { user } = reduxState.user
-  return { user }
-}
-
-export default connect(
-  mapStateToProps,
-  { setUser, getPokemon }
-)(Cover)
+export default Cover
