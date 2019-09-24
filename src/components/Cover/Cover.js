@@ -5,6 +5,13 @@ import { getPokemon } from '../../ducks/pokeReducer'
 import { Link } from 'react-router-dom'
 
 const Cover = props => {
+  const pressEnter = e => {
+    if (e.charCode === 13) {
+      props.getPokemon('https://pokeapi.co/api/v2/pokemon')
+      props.history.push('/open')
+    }
+
+  }
   return (
     <div className="cover">
       <div className="background">
@@ -26,6 +33,7 @@ const Cover = props => {
               placeholder="Username"
               type="text"
               value={props.user}
+              onKeyPress={e => pressEnter(e)}
             />
           </div>
         </div>

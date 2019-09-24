@@ -48,11 +48,20 @@ table {
 /* ----------------- End Reset File ----------------- */
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
+body {
+  background-color: #bec4ff;
+}
+
 .App {
+  background: linear-gradient(190deg, #daddff, #ffcaca);
+  width: 100vw;
+  min-height: 100vh;
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 @import './components/Cover/cover';
 @import './components/Open/open';
+@import './components/Details/details';
