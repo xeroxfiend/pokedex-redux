@@ -1,7 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {setUser} from "../../ducks/userReducer";
 
-const Cover = () => {
+const Cover = (props) => {
   return (
     <div className="cover">
       <div className="background">
@@ -18,12 +20,23 @@ const Cover = () => {
             <div className="triangle-button" />
           </Link>
           <div className="inputs">
-            <input placeholder="Username" type="text" />
+            <input
+              onChange={e => props.setUser(e.target.value)}
+              placeholder="Username"
+              type="text"
+            />
           </div>
         </div>
       </div>
     </div>
-  )
+  );
+};
+
+function mapStateToProps(reduxState) {
+  return reduxState;
 }
 
-export default Cover
+export default connect(
+  mapStateToProps,
+  {setUser}
+)(Cover);
